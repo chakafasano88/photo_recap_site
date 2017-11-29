@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { render } from 'react-dom';
 import App from './components/App';
 import Menu from './components/Menu';
@@ -11,7 +10,7 @@ import './css/style.css';
 import {
   BrowserRouter as Router,
   Route,
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 const Root = () => (
   <Router>
@@ -27,4 +26,4 @@ const Root = () => (
 )
 
 
-render(<Root className="align-middle" />, document.getElementById('root'));
+render(<Root  />, document.getElementById('root'));
