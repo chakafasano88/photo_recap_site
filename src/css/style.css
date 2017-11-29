@@ -1,0 +1,20 @@
+div {
+  /*border: 5px solid red;*/
+  margin-bottom: 20px;
+}
+
+nav {
+  margin-bottom: 30px;
+  height: 90px;
+  box-shadow: 1px 1px 1px;
+}
+
+img {
+  margin: 5px;
+}
+
+a.dropdown-item:hover {
+  background-color: #FFDF00	;
+  color: #d9534f;
+  font-weight: bold;
+}
