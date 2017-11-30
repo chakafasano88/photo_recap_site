@@ -6,6 +6,9 @@ import Spa from './components/Spa'
 import Gym from './components/Gym';
 import Chicago from './components/Chicago';
 import Walls from './components/Walls';
+import PropTypes from 'prop-types'; // ES6
+import "react-image-gallery/styles/css/image-gallery.css";
+
 import './css/style.css';
 import {
   BrowserRouter as Router,
@@ -14,7 +17,7 @@ import {
 
 const Root = () => (
   <Router>
-    <div className="">
+    <div >
       <Menu />
       <Route exact path="/" component={App}/>
       <Route path="/spa" component={Spa}/>

@@ -1,6 +1,6 @@
 div {
   /*border: 5px solid red;*/
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 
 nav {
@@ -11,10 +11,18 @@ nav {
 
 img {
   margin: 5px;
+  width: 300px;
+  height: 300px;
 }
 
 a.dropdown-item:hover {
   background-color: #FFDF00	;
   color: #d9534f;
   font-weight: bold;
+}
+
+.logo {
+  margin-top: 25px;
+  width: 100px;
+  height: 80px;
 }
