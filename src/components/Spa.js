@@ -1,37 +1,37 @@
 import React from 'react';
-import ImageGallery from 'react-image-gallery';
-import PropTypes from 'prop-types';
-import "react-image-gallery/styles/css/image-gallery.css";
+import Image from './Image.js'
+import spaImg from '../sample_images/spa-images';
 
 class Spa extends React.Component {
-  render(){
-    const images = [
-      {
-        original: 'http://lorempixel.com/1000/600/nature/1/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/1/',
-      },
-      {
-        original: 'http://lorempixel.com/1000/600/nature/2/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/2/'
-      },
-      {
-        original: 'http://lorempixel.com/1000/600/nature/3/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-      }
-    ]
+  constructor(){
+    super();
+    this.loadSamples = this.loadSamples.bind(this);
+  }
 
+  state = {
+    images: {}
+  }
+
+  componentWillMount(){
+    this.loadSamples()
+  }
+
+  loadSamples() {
+    this.setState({
+      images: spaImg
+    });
+  };
+
+  render() {
     return (
       <div className="container-fluid">
         <div className="row justify-content-center">
-        <ImageGallery
-          items={images}
-        />
+          {Object.keys(this.state.images)
+            .map(key => <Image key={key} details={this.state.images[key]} />)}
         </div>
       </div>
     );
   }
 }
-
-
 
 export default Spa;

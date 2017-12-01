@@ -1,38 +1,53 @@
 import React from 'react';
-import ImageGallery from 'react-image-gallery';
-import PropTypes from 'prop-types';
-import "react-image-gallery/styles/css/image-gallery.css";
-
+import Image from './Image.js';
+import Viewer from './Viewer.js';
+import gymImg from '../sample_images/gym-images';
+import 'simple-image-viewer/lib/styles.css'
 
 class Gym extends React.Component {
-  render(){
-    const images = [
-      {
-        original: 'http://lorempixel.com/1000/600/nature/1/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/1/',
-      },
-      {
-        original: 'http://lorempixel.com/1000/600/nature/2/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/2/'
-      },
-      {
-        original: 'http://lorempixel.com/1000/600/nature/3/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-      }
-    ]
+  constructor(){
+    super();
+    this.loadSamples = this.loadSamples.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
 
+  state = {
+    showComponent: false,
+    images: {}
+  }
+
+  handleClick() {
+    this.setState({
+      showComponent: true,
+    });
+  }
+
+  componentWillMount(){
+    this.loadSamples()
+  }
+
+  loadSamples() {
+    this.setState({
+      images: gymImg
+    });
+  };
+
+  render() {
     return (
       <div className="container-fluid">
         <div className="row justify-content-center">
-        <ImageGallery
-          items={images}
-        />
+          <button onClick={this.handleClick}>Button
+            {Object.keys(this.state.images)
+              .map(key => <Image key={key} details={this.state.images[key]} />)
+            }
+          </button>
+          {this.state.showComponent ? <Viewer /> :null}
+
+
         </div>
       </div>
     );
   }
 }
-
-
 
 export default Gym;

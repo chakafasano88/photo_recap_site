@@ -1,7 +1,12 @@
-div {
-  /*border: 5px solid red;*/
-  /*margin-bottom: 20px;*/
+body {
+
 }
+
+
+div {
+  border: 5px solid red;
+}
+
 
 nav {
   margin-bottom: 30px;
@@ -25,4 +30,9 @@ a.dropdown-item:hover {
   margin-top: 25px;
   width: 100px;
   height: 80px;
+}
+
+.list {
+  display: inline;
+  list-style: none;
 }
