@@ -6,19 +6,20 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <div className="row justify-content-start">
-          <div className="col-5">
-          </div>
-          <h1>Image Recap</h1>
         </div>
         <div className="row justify-content-center">
           <div className="col-1"></div>
           <div className="col-1"></div>
           <div className="mt-20 col-6 text-center">
-            <h2>Click the menu tabs above to browse photos! </h2>
+            <h1>Image Recap</h1>
           </div>
           <div className="col-1"></div>
           <div className="col-1"></div>
+          <div className="mt-20 row just text-center">
+              <h2>Click the menu tabs above to browse photos! </h2>
+          </div>
         </div>
+
       </div>
     )
   }
