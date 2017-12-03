@@ -11,12 +11,12 @@ class Menu extends React.Component {
           </div>
           <div className="col">
           </div>
-          <div className="col-lg-auto dropdown">
-            <a className="btn-lg btn-primary dropdown-toggle" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div className="col-md-auto">
+            <a className="btn-lg btn-primary dropdown-toggle hi" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Gyms
             </a>
-            <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-              <Link className="dropdown-item " to="/spa">IvySpaClub</Link>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <Link className="dropdown-item " to="/spa">Ivy Spa Club</Link>
               <div className="dropdown-divider"></div>
               <Link className="dropdown-item" to="/gym">World Gym</Link>
             </div>

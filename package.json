@@ -17,13 +17,12 @@
     "react": "^16.2.0",
     "react-addons-css-transition-group": "15.6.2",
     "react-dom": "16.2.0",
-    "react-image-gallery": "^0.8.6",
-    "react-image-lightbox": "^4.3.0",
-    "react-images": "^0.5.13",
+    "react-image-viewer": "^0.1.0",
+    "react-image-viewer-zoom": "^1.0.36",
     "react-router": "4.2.0",
     "react-router-dom": "^4.2.2",
     "react-viewer": "^2.2.6",
-    "simple-image-viewer": "^0.2.13"
+    "react-viewer-mda": "^2.2.7"
   },
   "scripts": {
     "start": "react-scripts start",

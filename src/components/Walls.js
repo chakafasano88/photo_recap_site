@@ -25,6 +25,7 @@ class Wall extends React.Component {
   render() {
     return (
       <div className="container-fluid">
+        <h1>Wall Inspirations</h1>
         <div className="row justify-content-center">
           {Object.keys(this.state.images)
             .map(key => <Image key={key} details={this.state.images[key]} />)}

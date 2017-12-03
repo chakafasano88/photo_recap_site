@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from './Image.js';
-import Viewer from './Viewer.js';
 import gymImg from '../sample_images/gym-images';
-import 'simple-image-viewer/lib/styles.css'
+import Viewer from 'react-viewer';
+import 'react-viewer/dist/index.css';
 
 class Gym extends React.Component {
   constructor(){
@@ -13,18 +13,19 @@ class Gym extends React.Component {
 
   state = {
     showComponent: false,
-    images: {}
+    images: {},
+    visible: false
   }
 
   handleClick() {
     this.setState({
-      showComponent: true,
+      showComponent: true
     });
-  }
+  };
 
   componentWillMount(){
     this.loadSamples()
-  }
+  };
 
   loadSamples() {
     this.setState({
@@ -35,15 +36,11 @@ class Gym extends React.Component {
   render() {
     return (
       <div className="container-fluid">
+        <h1>World Gym</h1>
         <div className="row justify-content-center">
-          <button onClick={this.handleClick}>Button
             {Object.keys(this.state.images)
               .map(key => <Image key={key} details={this.state.images[key]} />)
             }
-          </button>
-          {this.state.showComponent ? <Viewer /> :null}
-
-
         </div>
       </div>
     );
