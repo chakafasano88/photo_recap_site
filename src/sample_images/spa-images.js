@@ -1,6 +1,6 @@
 const spa = {
 
-  gym1: {
+  spa1: {
     image: './images/1.jpg'
   },
 };
