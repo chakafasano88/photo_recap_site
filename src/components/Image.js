@@ -29,7 +29,7 @@ class Image extends React.Component {
   render(){
     const dog = 'https://www.w3schools.com/w3css/img_fjords.jpg'
     return (
-        <div className="border-top-0">
+        <div className="image-container border-top-0 mt-20">
           <a className="photo-links" onClick={() => { this.setState({ visible: !this.state.visible }); } }>
             <img className="rounded img-thumbnail" src={this.props.details.image} alt=""/>
           </a>
@@ -41,9 +41,7 @@ class Image extends React.Component {
                   {src: `${this.props.details.image}`, alt: '', name: ''}
                 ]}
               />
-
           </div>
-
         </div>
     );
   }

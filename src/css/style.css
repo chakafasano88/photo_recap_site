@@ -4,6 +4,7 @@ body {
 
 
 div {
+  /*border: 1px solid red;*/
 }
 
 nav {
@@ -29,6 +30,13 @@ a.dropdown-item:hover {
   margin-top: 10px;
 }
 
+.title-borders {
+  background-color: white;
+  border: 1px solid grey;
+  box-shadow: 1px 1px 1px;
+
+}
+
 .logo {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -43,4 +51,14 @@ a.dropdown-item:hover {
 
 .photo-links {
   cursor: pointer;
+}
+
+.image-container {
+  background-color: white;
+  border: 2px solid white;
+  box-shadow: 1px 1px 1px;
+}
+
+.mt-20 {
+  margin-top: 40px;
 }

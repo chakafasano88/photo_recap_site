@@ -25,7 +25,7 @@ class Chicago extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <h1>Aragon Ballroom</h1>
+        <div className="title-borders col-12 text-center"><h1>Aragon Ballroom</h1></div>
         <div className="row justify-content-center">
           {Object.keys(this.state.images)
             .map(key => <Image key={key} details={this.state.images[key]} />)}
